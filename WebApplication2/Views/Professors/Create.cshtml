@@ -1,0 +1,17 @@
+﻿@model WebApplication2.Models.Professors
+@{
+    ViewBag.Title = "Добавление пользователи";
+}
+<form asp-action="Create"asp-controller="Professors">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Преподаватель</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="subject" class="control-label">Предмет</label>
+         <input type="text" asp-for="subject" class="form-control" />
+     </div>
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default"/>
+    </div>
+</form>

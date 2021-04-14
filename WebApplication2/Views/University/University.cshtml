@@ -1,0 +1,22 @@
+﻿@model IEnumerable<WebApplication2.Models.University>
+@{
+    ViewBag.Title = "Все факультеты";
+}
+<a asp-action="Create"  style="        color: #fab96e">Добаление факультета</a>
+<table class="table">
+    <tr valign="middle"  align= "center">
+        <td width="20%" class="col1">  Название </td>
+        <td width="20%" class="col2">  Рейтинг </td>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr valign="middle"  align= "center">
+    <td>@item.Name</td>
+    <td>@item.Rating</td>
+    <th><a href="/University/DeleteUniversity/@item.UniversityId"  style="color: #759c68">Delete</a></th>
+    <th><a href="/University/UpdateUniversity/@item.UniversityId"  style="color: #759c68">Update</a></th>
+</tr>
+
+
+    }
+</table>

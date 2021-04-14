@@ -1,0 +1,20 @@
+﻿@model WebApplication2.Models.Groups
+@{
+    ViewBag.Title = "Udate";
+}
+@{ var item = Model;}
+<form asp-action="UpdateGroups" asp-controller="Groups">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" value="@item.Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="number" class="control-label">number</label>
+        <input type="text" asp-for="number" class="form-control" value="@item.number" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+
+</form>

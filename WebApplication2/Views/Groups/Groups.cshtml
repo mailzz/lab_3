@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WebApplication2.Models.Groups>
+@{
+    ViewBag.Title = "Все факультеты";
+}
+<a asp-action="Create">Добаление группы</a>
+<table class="table">
+    <tr><td>Название</td><td>Количество учащихся</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.number</td>
+            <th><a href="/Professors/DeleteProfessors/@item.GroupsId">Delete</a></th>
+            <th><a href="/Professors/UpdateProfessors/@item.GroupsId">Update</a></th>
+        </tr>
+
+
+    }
+</table>
